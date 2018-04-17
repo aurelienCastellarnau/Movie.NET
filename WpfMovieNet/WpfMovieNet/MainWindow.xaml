@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfMovieNet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMovieNet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="label1" Content="Hey" HorizontalAlignment="Left" Margin="65,68,0,0" VerticalAlignment="Top" Height="88" Width="198"/>
+        <Button  x:Name="button1" Content="Click Click" HorizontalAlignment="Left" Margin="464,272,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

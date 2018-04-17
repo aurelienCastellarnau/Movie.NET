@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="WpfForMN.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label1"  Content="MonText" HorizontalAlignment="Left" Margin="132,155,0,0" VerticalAlignment="Top" Height="42" Width="284"/>
+        <Button x:Name="button1" Content="Click here" HorizontalAlignment="Left" Margin="558,293,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
