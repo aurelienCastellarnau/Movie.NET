@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movienet", "Movienet\Movienet.csproj", "{37C4B3F0-33F7-4C0F-A073-39665308615A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{66E13338-981E-4771-80CC-B3BAC61BCEB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C4B3F0-33F7-4C0F-A073-39665308615A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C4B3F0-33F7-4C0F-A073-39665308615A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C4B3F0-33F7-4C0F-A073-39665308615A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C4B3F0-33F7-4C0F-A073-39665308615A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E13338-981E-4771-80CC-B3BAC61BCEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E13338-981E-4771-80CC-B3BAC61BCEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E13338-981E-4771-80CC-B3BAC61BCEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E13338-981E-4771-80CC-B3BAC61BCEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B3DAA57-7F19-4F08-BD94-72D43F837DA3}
+	EndGlobalSection
+EndGlobal
