@@ -64,8 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\CommentDao.cs" />
     <Compile Include="Dao\FilmDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="Interface\ICommentDao.cs" />
     <Compile Include="Interface\IFilmDao.cs" />
     <Compile Include="Interface\IUserDao.cs" />
     <Compile Include="MainClass.cs" />
