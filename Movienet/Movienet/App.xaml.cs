@@ -13,5 +13,13 @@ namespace Movienet
     /// </summary>
     public partial class App : Application
     {
+        // Source:
+        // https://docs.microsoft.com/fr-fr/dotnet/framework/wpf/app-development/how-to-get-and-set-the-main-application-window
+
+        void App_Startup(object sender, StartupEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+        }
     }
 }
