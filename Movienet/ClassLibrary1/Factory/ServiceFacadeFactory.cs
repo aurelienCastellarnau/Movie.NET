@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1.Interface;
+using ClassLibrary1.ServiceFacade;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace ClassLibrary1.Factory
         IServiceFacade GetServiceFacade() {
             IServiceFacade serviceFacade = null;
 
-            serviceFacade = new ServiceFacade();
+            serviceFacade = new ServiceFacade.ServiceFacade();
+
+            return serviceFacade;
         };
     }
 }

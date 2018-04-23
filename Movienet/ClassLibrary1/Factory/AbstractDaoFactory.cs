@@ -14,5 +14,10 @@ namespace ClassLibrary1.Factory
         public abstract IFilmDao getFilmDao();
 
         public abstract ICommentDao getCommentDao();
+
+        public static AbstractDaoFactory getFactory()
+        {
+            return new DaoFactory();
+        }
     }
 }
