@@ -29,7 +29,7 @@ namespace Movienet
         {
             // On retrouve l'élément root (la Frame dans la window)
             // on lui set le VVM User
-            root.Content = new User();
+            root.Content = new DisplayUsers();
         }
 
         private void goToAddUser(object sender, RoutedEventArgs e)

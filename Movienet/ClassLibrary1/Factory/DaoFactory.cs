@@ -8,7 +8,7 @@ using ClassLibrary1.Interface;
 
 namespace ClassLibrary1.Factory
 {
-    class DaoFactory : AbstractDaoFactory
+   class DaoFactory : AbstractDaoFactory
     {
         public override ICommentDao getCommentDao()
         {

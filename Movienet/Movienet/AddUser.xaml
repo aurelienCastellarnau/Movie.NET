@@ -10,6 +10,7 @@
 
     <Grid>
         <TextBox x:Name="AddUserInput" HorizontalAlignment="Left" Height="118" Margin="290,136,0,0" TextWrapping="Wrap" Text="Add a user" VerticalAlignment="Top" Width="274"/>
+        <TextBlock x:Name="Info" HorizontalAlignment="Left" Margin="28,214,0,0" TextWrapping="Wrap" Text="Information: " VerticalAlignment="Top" Height="182" Width="211"/>
 
     </Grid>
 </Page>

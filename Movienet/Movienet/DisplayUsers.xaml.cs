@@ -12,42 +12,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClassLibrary1;
 using ClassLibrary1.Factory;
 using ClassLibrary1.Interface;
 
 namespace Movienet
 {
     /// <summary>
-    /// Logique d'interaction pour AddUser.xaml
+    /// Logique d'interaction pour User.xaml
     /// </summary>
-    public partial class AddUser : Page
+    public partial class DisplayUsers : Page
     {
-        public AddUser()
+        public DisplayUsers()
         {
             IServiceFacade Services = ServiceFacadeFactory.GetServiceFacade();
             IUserDao uDao = Services.GetUserDao();
-            String info = "Adding a user";
-            ClassLibrary1.User checkUser = new User();
-            ClassLibrary1.User nUser = new User();
-            nUser.firstname = "Bill";
-            nUser.lastname = "Boket";
-            nUser.login = "BillBoket";
-            nUser.password = "TheHole";
+            List<ClassLibrary1.User> users = new List<ClassLibrary1.User>();
             try
             {
-                checkUser = uDao.CreateUser(nUser);
+                users = uDao.getAllUsers();
+                foreach (ClassLibrary1.User u in users)
+                {
+                    UserList.Items.Add(u.ToString());
+                }
             } catch (Exception e)
             {
-                info = "Add user failed: " + e;
+                if (Info != null) 
+                    Info.Text = Info.Text + " Exception: " + e;
             }
-            if (checkUser.Id > 0)
-            {
-                info = "Everything happens well";
-            }
-            if (Info != null)
-                Info.Text = Info.Text + " Adding result: " + info;
             InitializeComponent();
         }
+        
     }
 }
