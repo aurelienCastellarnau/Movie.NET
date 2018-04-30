@@ -12,9 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClassLibrary1;
-using ClassLibrary1.Factory;
-using ClassLibrary1.Interface;
 
 namespace Movienet
 {
@@ -25,28 +22,6 @@ namespace Movienet
     {
         public AddUser()
         {
-            IServiceFacade Services = ServiceFacadeFactory.GetServiceFacade();
-            IUserDao uDao = Services.GetUserDao();
-            String info = "Adding a user";
-            ClassLibrary1.User checkUser = new User();
-            ClassLibrary1.User nUser = new User();
-            nUser.firstname = "Bill";
-            nUser.lastname = "Boket";
-            nUser.login = "BillBoket";
-            nUser.password = "TheHole";
-            try
-            {
-                checkUser = uDao.CreateUser(nUser);
-            } catch (Exception e)
-            {
-                info = "Add user failed: " + e;
-            }
-            if (checkUser.Id > 0)
-            {
-                info = "Everything happens well";
-            }
-            if (Info != null)
-                Info.Text = Info.Text + " Adding result: " + info;
             InitializeComponent();
         }
     }

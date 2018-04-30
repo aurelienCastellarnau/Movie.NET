@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:Movienet"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="User">
-
+      DataContext="{Binding Source={StaticResource VM_Locator}, Path=VM_DisplayUsers}"
+      Title="Display users">
     <Grid>
         <TextBlock x:Name="textBlock" FontSize="32" Text="Display users"  HorizontalAlignment="Left" Margin="45,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="137" Width="219"/>
-        <ListBox x:Name="UserList" HorizontalAlignment="Left" Height="366" Margin="413,51,0,0" VerticalAlignment="Top" Width="342"/>
+           <ListBox x:Name="UserListDef" ItemsSource="{Binding UserList}" Height="264" Width="205"/>
         <TextBlock x:Name="Info" HorizontalAlignment="Left" Margin="45,231,0,0" TextWrapping="Wrap" Text="Informations: " VerticalAlignment="Top" Height="186" Width="279"/>
 
     </Grid>

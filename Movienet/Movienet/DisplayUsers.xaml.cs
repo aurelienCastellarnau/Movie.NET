@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClassLibrary1.Factory;
-using ClassLibrary1.Interface;
+using ModelMovieNet.Factory;
+using ModelMovieNet.Interface;
 
 namespace Movienet
 {
@@ -24,21 +24,6 @@ namespace Movienet
     {
         public DisplayUsers()
         {
-            IServiceFacade Services = ServiceFacadeFactory.GetServiceFacade();
-            IUserDao uDao = Services.GetUserDao();
-            List<ClassLibrary1.User> users = new List<ClassLibrary1.User>();
-            try
-            {
-                users = uDao.getAllUsers();
-                foreach (ClassLibrary1.User u in users)
-                {
-                    UserList.Items.Add(u.ToString());
-                }
-            } catch (Exception e)
-            {
-                if (Info != null) 
-                    Info.Text = Info.Text + " Exception: " + e;
-            }
             InitializeComponent();
         }
         
