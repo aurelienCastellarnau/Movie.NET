@@ -90,10 +90,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Authentication.xaml.cs">
+      <DependentUpon>Authentication.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DisplayUsers.xaml.cs">
       <DependentUpon>DisplayUsers.xaml</DependentUpon>
     </Compile>
     <Compile Include="VM_AddUser.cs" />
+    <Compile Include="VM_Auth.cs" />
     <Compile Include="VM_DisplayUsers.cs" />
     <Compile Include="VM_Locator.cs" />
   </ItemGroup>
@@ -129,6 +133,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="AddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Authentication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -36,5 +36,10 @@ namespace Movienet
         {
             root.Content = new AddUser();
         }
+
+        private void goToAuthenticate(object sender, RoutedEventArgs e)
+        {
+            root.Content = new Authentication();
+        }
     }
 }

@@ -9,8 +9,12 @@
       DataContext="{Binding Source={StaticResource VM_Locator}, Path=VM_DisplayUsers}"
       Title="Display users">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
         <TextBlock x:Name="textBlock" FontSize="32" Text="Display users"  HorizontalAlignment="Left" Margin="45,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="137" Width="219"/>
-           <ListBox x:Name="UserListDef" ItemsSource="{Binding UserList}" Height="264" Width="205"/>
+        <ListBox x:Name="UserListDef" ItemsSource="{Binding UserList}" Height="264" Width="205" Grid.ColumnSpan="2" Margin="298,93"/>
         <TextBlock x:Name="Info" HorizontalAlignment="Left" Margin="45,231,0,0" TextWrapping="Wrap" Text="Informations: " VerticalAlignment="Top" Height="186" Width="279"/>
 
     </Grid>
