@@ -95,6 +95,9 @@
       <DependentUpon>DisplayUsers.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\VM_DisplayUsers.cs" />
+    <Compile Include="View\UserDetail.xaml.cs">
+      <DependentUpon>UserDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VM_Locator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DisplayUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
