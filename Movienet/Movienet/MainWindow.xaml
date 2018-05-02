@@ -11,6 +11,6 @@
             <Button Content="Display a user" MinWidth="10" Margin="6" Click="goToDisplayUser"></Button>
             <Button Content="Add a user" MinWidth="10" Margin="6" Click="goToAddUser"></Button>
         </StackPanel>
-        <Frame x:Name="root" Margin="0,35,0,0"/>
+        <Frame x:Name="root" Margin="0,35,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

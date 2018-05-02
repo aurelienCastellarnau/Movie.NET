@@ -8,7 +8,13 @@ namespace Movienet
 {
     public class VM_Locator
     {
-        public static VM_AddUser VM_AddUser { get; } = new VM_AddUser();
-        public static VM_DisplayUsers VM_DisplayUsers { get; } = new VM_DisplayUsers();
+        public static VM_User VM_User { get; set; }
+        public static VM_DisplayUsers VM_DisplayUsers { get; set; }
+
+        public VM_Locator()
+        {
+            VM_User = new VM_User();
+            VM_DisplayUsers = new VM_DisplayUsers();
+        }
     }
 }

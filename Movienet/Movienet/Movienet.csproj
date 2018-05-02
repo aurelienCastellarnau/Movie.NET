@@ -83,18 +83,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddUser.xaml.cs">
+    <Compile Include="ViewModel\VM_User.cs" />
+    <Compile Include="View\AddUser.xaml.cs">
       <DependentUpon>AddUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DisplayUsers.xaml.cs">
+    <Compile Include="View\DisplayUsers.xaml.cs">
       <DependentUpon>DisplayUsers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VM_AddUser.cs" />
-    <Compile Include="VM_DisplayUsers.cs" />
+    <Compile Include="ViewModel\VM_DisplayUsers.cs" />
+    <Compile Include="View\UserDetail.xaml.cs">
+      <DependentUpon>UserDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VM_Locator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,7 +131,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="AddUser.xaml">
+    <Page Include="View\AddUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,7 +139,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DisplayUsers.xaml">
+    <Page Include="View\DisplayUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
