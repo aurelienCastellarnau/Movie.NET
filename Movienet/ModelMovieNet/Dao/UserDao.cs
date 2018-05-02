@@ -32,7 +32,7 @@ namespace ModelMovieNet.Dao
         public List<User> getAllUsers()
         {
             DataModelContainer ctx = new DataModelContainer();
-            return ctx.UserSet.Select(u => u).ToList();
+            return ctx.UserSet.ToList();
         }
 
         public User GetUser(int uid)
