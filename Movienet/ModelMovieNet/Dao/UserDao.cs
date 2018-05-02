@@ -39,5 +39,13 @@ namespace ModelMovieNet.Dao
         {
             throw new NotImplementedException();
         }
+
+        public User LogUser(User user)
+        {
+            DataModelContainer ctx = new DataModelContainer();
+            return ctx.UserSet
+                .Where(u => u.Login == user.Login && user.Password == u.Password)
+                .Select(u => u).FirstOrDefault();
+        }
     }
 }
