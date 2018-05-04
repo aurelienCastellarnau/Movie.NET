@@ -13,5 +13,6 @@ namespace ModelMovieNet.Interface
         Boolean DeleteUser(User user);
         User GetUser(int uid);
         List<User> getAllUsers();
+        User LogUser(User user);
     }
 }

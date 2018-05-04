@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Display a user" MinWidth="10" Margin="6" Click="goToDisplayUser"></Button>
-            <Button Content="Add a user" MinWidth="10" Margin="6" Click="goToAddUser"></Button>
-        </StackPanel>
-        <Frame x:Name="root" Margin="0,35,0,0" NavigationUIVisibility="Hidden"/>
+        <Menu>
+            <MenuItem Header="Display a user" Click="goToDisplayUser"/>
+            <MenuItem Header="Add a user" Click="goToAddUser"/>
+            <MenuItem Header="Authenticate" Click="goToAuthenticate"/>
+        </Menu>
+        
+        <Frame x:Name="root" Margin="10,31,10,10"/>
     </Grid>
 </Window>

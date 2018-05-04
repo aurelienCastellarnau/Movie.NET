@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Navigation;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using ModelMovieNet;
@@ -18,6 +19,7 @@ namespace Movienet
         public RelayCommand Add { get; set; } = null;
         public RelayCommand Update { get; set; } = null;
         public RelayCommand Delete { get; set; } = null;
+        public RelayCommand Log { get; set; } = null;
 
         private User _user;
         private string _info;
@@ -26,6 +28,7 @@ namespace Movienet
         {
             User = new User();
             Add = new RelayCommand(AddUser, canAdd);
+            Log = new RelayCommand(LogUser, true);
             _info = "Informations: ";
         }
 
@@ -158,6 +161,25 @@ namespace Movienet
             if (infoAdd != null)
                 Info = " Adding result: " + infoAdd;
             Console.WriteLine("Info : " + infoAdd);
+        }
+
+        void LogUser()
+        {
+            Console.WriteLine("In Log User from VM_AddUser");
+            String infoLog = "Loggin a user";
+            User checkUser = new User();
+            Boolean logged = false;
+            if (User.Login == null || User.Password == null)
+                infoLog = "Wrong infos for Login";
+            else
+            {
+                checkUser = uDao.LogUser(User);
+                if (null == checkUser)
+                    infoLog = "Log Failed";
+                else
+                    logged = true;
+            }   
+            Console.WriteLine("Info : " + infoLog);
         }
 
         Boolean canAdd()

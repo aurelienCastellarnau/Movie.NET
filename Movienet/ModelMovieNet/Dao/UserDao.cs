@@ -32,12 +32,20 @@ namespace ModelMovieNet.Dao
         public List<User> getAllUsers()
         {
             DataModelContainer ctx = new DataModelContainer();
-            return ctx.UserSet.Select(u => u).ToList();
+            return ctx.UserSet.ToList();
         }
 
         public User GetUser(int uid)
         {
             throw new NotImplementedException();
+        }
+
+        public User LogUser(User user)
+        {
+            DataModelContainer ctx = new DataModelContainer();
+            return ctx.UserSet
+                .Where(u => u.Login == user.Login && user.Password == u.Password)
+                .Select(u => u).FirstOrDefault();
         }
     }
 }
