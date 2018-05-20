@@ -9,6 +9,7 @@
   <Application.Resources>
     <ResourceDictionary>
             <local:VM_Locator x:Key="VM_Locator" />
+            <local:VM_RootLocator x:Key="VM_RootLocator" />
         </ResourceDictionary>
   </Application.Resources>
 </Application>

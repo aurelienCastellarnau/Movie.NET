@@ -85,6 +85,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModel\VM_Authentication.cs" />
     <Compile Include="User_State_Machine.cs" />
+    <Compile Include="ViewModel\VM_RootFrame.cs" />
     <Compile Include="ViewModel\VM_User.cs" />
     <Compile Include="View\AddUser.xaml.cs">
       <DependentUpon>AddUser.xaml</DependentUpon>
@@ -100,10 +101,15 @@
       <DependentUpon>DisplayUsers.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\VM_DisplayUsers.cs" />
+    <Compile Include="View\RootFrame.xaml.cs">
+      <DependentUpon>RootFrame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserDetail.xaml.cs">
       <DependentUpon>UserDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="VM_Locator.cs" />
+    <Compile Include="VM_MainWindow.cs" />
+    <Compile Include="VM_RootLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow.xaml.cs">
@@ -149,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DisplayUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RootFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
