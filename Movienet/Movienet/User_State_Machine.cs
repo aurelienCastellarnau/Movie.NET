@@ -27,7 +27,7 @@ namespace Movienet
             /**
              * The class subscribe to two setters and a request for the actual state
              * */
-            MessengerInstance.Register<STATE>(this, "SetUserState", SetState);
+            MessengerInstance.Register<STATE>(this, "SetUserState", SetUserState);
             MessengerInstance.Register<User>(this, "SetUser", SetUser);
             MessengerInstance.Register<User>(this, "SetSessionUser", SetSessionUser);
             MessengerInstance.Register<string>(this, "Context", SendContext);
@@ -75,7 +75,7 @@ namespace Movienet
         /**
          * Setters messenger callbacks
          * */
-        void SetState(STATE state)
+        void SetUserState(STATE state)
         {
             Console.WriteLine("User_State_Machine: set State to: " + state);
             VM_User_State = state;
@@ -102,6 +102,7 @@ namespace Movienet
             Console.WriteLine("User_State_Machine: " + CurrentUser?.ToString() + " " + VM_User_State);
             MessengerInstance.Send(CurrentUser, "CurrentUser");
             MessengerInstance.Send(VM_User_State, "CurrentState");
+            MessengerInstance.Send(Session, "CurrentSessionUser");
         }
     }
 }
