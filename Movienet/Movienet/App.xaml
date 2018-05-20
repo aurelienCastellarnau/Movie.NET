@@ -10,6 +10,7 @@
     <ResourceDictionary>
             <local:VM_Locator x:Key="VM_Locator" />
             <local:VM_RootLocator x:Key="VM_RootLocator" />
+            <local:VM_UserLocator x:Key="VM_UserLocator" />
         </ResourceDictionary>
   </Application.Resources>
 </Application>

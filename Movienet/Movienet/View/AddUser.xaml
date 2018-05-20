@@ -4,20 +4,27 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Movienet"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      DataContext="{Binding Source={StaticResource VM_Locator}, Path=VM_User}"
-      Title="AddUser">
-    <Grid>
-        <TextBlock x:Name="Info" HorizontalAlignment="Left" Margin="28,214,0,0" TextWrapping="Wrap" Text="{Binding Info}" VerticalAlignment="Top" Height="182" Width="211"/>
-        <Label x:Name="firstnameLabel" Content="Firstname" HorizontalAlignment="Left" Margin="537,68,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Firstname" HorizontalAlignment="Left" Height="23" Margin="537,94,0,0" TextWrapping="Wrap" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lastnameLabel" Content="Lastname" HorizontalAlignment="Left" Margin="537,134,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="lastname" HorizontalAlignment="Left" Height="23" Margin="537,160,0,0" TextWrapping="Wrap" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="loginLabel" Content="Login" HorizontalAlignment="Left" Margin="537,206,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="login" HorizontalAlignment="Left" Height="23" Margin="537,232,0,0" TextWrapping="Wrap" Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="537,269,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="537,300,0,0" TextWrapping="Wrap" Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="AddBtn" Content="Add a user" Command="{Binding Add}" HorizontalAlignment="Left" Margin="561,363,0,0" VerticalAlignment="Top" Width="75"/>
-    </Grid>
+      mc:Ignorable="d"
+      DataContext="{Binding Source={StaticResource VM_UserLocator}, Path=VM_User}"
+      Title="AddUser" Width="526.257" Height="535.475">
+    <Border BorderBrush="Black" BorderThickness="2">
+        <Grid HorizontalAlignment="Left" Width="493" Margin="21,-11,0,31">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="19*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="infoAdd" HorizontalAlignment="Left" Margin="40,259,0,0" TextWrapping="WrapWithOverflow" Text="{Binding Info}" VerticalAlignment="Top" Height="208" Width="123"/>
+            <Label x:Name="firstnameLabel" Content="Firstname" HorizontalAlignment="Left" Margin="6,58,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="26"/>
+            <TextBox x:Name="Firstname" HorizontalAlignment="Left" Height="23" Margin="6,84,0,0" TextWrapping="Wrap" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+            <Label x:Name="lastnameLabel" Content="Lastname" HorizontalAlignment="Left" Margin="6,124,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="26"/>
+            <TextBox x:Name="lastname" HorizontalAlignment="Left" Height="23" Margin="6,150,0,0" TextWrapping="Wrap" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+            <Label x:Name="loginLabel" Content="Login" HorizontalAlignment="Left" Margin="6,196,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="26"/>
+            <TextBox x:Name="login" HorizontalAlignment="Left" Height="23" Margin="6,222,0,0" TextWrapping="Wrap" Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+            <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="6,259,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" Height="26"/>
+            <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="6,290,0,0" TextWrapping="Wrap" Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+            <Button x:Name="AddBtn" Content="Add a user" Command="{Binding Add}" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="95" Grid.Column="2" Height="25"/>
+            <Label x:Name="label" Content="AddUser" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="123" Width="189"/>
+        </Grid>
+    </Border>
 </Page>

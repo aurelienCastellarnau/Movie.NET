@@ -104,12 +104,16 @@
     <Compile Include="View\RootFrame.xaml.cs">
       <DependentUpon>RootFrame.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateUser.xaml.cs">
+      <DependentUpon>UpdateUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UserDetail.xaml.cs">
       <DependentUpon>UserDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="VM_Locator.cs" />
     <Compile Include="VM_MainWindow.cs" />
     <Compile Include="VM_RootLocator.cs" />
+    <Compile Include="VM_UserLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindow.xaml.cs">
@@ -159,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RootFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UpdateUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
