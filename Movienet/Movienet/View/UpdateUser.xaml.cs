@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Movienet
 {
     /// <summary>
-    /// Interaction logic for Authentication.xaml
+    /// Logique d'interaction pour UpdateUser.xaml
     /// </summary>
-    public partial class Authentication : Page
+    public partial class UpdateUser : Page
     {
-        public Authentication()
+        public UpdateUser()
         {
             InitializeComponent();
         }
