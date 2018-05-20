@@ -28,5 +28,31 @@ namespace ModelMovieNet
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
+
+        public override string ToString()
+        {
+            return "User - " +
+                " ID: " + this.Id +
+                " Login: " + this.Login +
+                " Password: " + this.Password +
+                " Firstname " + this.Firstname +
+                " Lastname " + this.Lastname +
+                " - ";
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool check = false;
+            if (obj.GetType() == this.GetType())
+            {
+                User param = (User)obj;
+                check = true;
+                check = check && param.Firstname == this.Firstname;
+                check = check && param.Lastname == this.Lastname;
+                check = check && param.Login == this.Login;
+                check = check && param.Password == this.Password;
+            }
+            return check;
+        }
     }
 }

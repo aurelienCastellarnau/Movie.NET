@@ -21,12 +21,19 @@ namespace ModelMovieNet.Dao
 
         public User UpdateUser(User user)
         {
+            Console.WriteLine("User passed to update: " + user.ToString());
             DataModelContainer ctx = new DataModelContainer();
-            User updated = ctx.UserSet.Where(u => u.Id == user.Id).FirstOrDefault();
-            if (updated.Equals(user))
+            User toUpdate = ctx.UserSet.Where(u => u.Id == user.Id).FirstOrDefault();
+            Console.WriteLine("In UpdateUser, return of update method: " + toUpdate.ToString());
+            toUpdate.Firstname = user.Firstname;
+            toUpdate.Lastname = user.Lastname;
+            toUpdate.Login = user.Login;
+            toUpdate.Password = user.Password;
+            if (toUpdate.Equals(user))
             {
+                Console.WriteLine("Update ok");
                 ctx.SaveChanges();
-                return updated;
+                return toUpdate;
             }
             else
             {
@@ -37,7 +44,8 @@ namespace ModelMovieNet.Dao
         public bool DeleteUser(User user)
         {
             DataModelContainer ctx = new DataModelContainer();
-            ctx.UserSet.Remove(user);
+            User toDelete = ctx.UserSet.Where(u => u.Id == user.Id).FirstOrDefault();
+            ctx.UserSet.Remove(toDelete);
             ctx.SaveChanges();
             return true;
         }
