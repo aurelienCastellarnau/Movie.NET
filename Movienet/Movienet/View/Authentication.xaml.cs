@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Movienet.View
+namespace Movienet
 {
     /// <summary>
     /// Interaction logic for Authentication.xaml
@@ -23,11 +23,6 @@ namespace Movienet.View
         public Authentication()
         {
             InitializeComponent();
-        }
-
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

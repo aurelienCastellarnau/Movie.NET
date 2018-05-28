@@ -1,4 +1,4 @@
-﻿using Movienet.View;
+﻿using Movienet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,25 +23,6 @@ namespace Movienet
         public MainWindow()
         {
             InitializeComponent();
-            root.Content = new Authentication();
-        }
-
-        // évênements onClick définis dans les buttons
-        private void goToDisplayUser(object sender, RoutedEventArgs e)
-        {
-            // On retrouve l'élément root (la Frame dans la window)
-            // on lui set le VVM User
-            root.Content = new DisplayUsers();
-        }
-
-        private void goToAddUser(object sender, RoutedEventArgs e)
-        {
-            root.Content = new AddUser();
-        }
-
-        private void goToAuthenticate(object sender, RoutedEventArgs e)
-        {
-            root.Content = new Authentication();
         }
     }
 }

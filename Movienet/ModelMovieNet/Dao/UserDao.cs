@@ -21,12 +21,33 @@ namespace ModelMovieNet.Dao
 
         public User UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("User passed to update: " + user.ToString());
+            DataModelContainer ctx = new DataModelContainer();
+            User toUpdate = ctx.UserSet.Where(u => u.Id == user.Id).FirstOrDefault();
+            Console.WriteLine("In UpdateUser, return of update method: " + toUpdate.ToString());
+            toUpdate.Firstname = user.Firstname;
+            toUpdate.Lastname = user.Lastname;
+            toUpdate.Login = user.Login;
+            toUpdate.Password = user.Password;
+            if (toUpdate.Equals(user))
+            {
+                Console.WriteLine("Update ok");
+                ctx.SaveChanges();
+                return toUpdate;
+            }
+            else
+            {
+                throw new Exception("Update failed");
+            }
         }
 
         public bool DeleteUser(User user)
         {
-            throw new NotImplementedException();
+            DataModelContainer ctx = new DataModelContainer();
+            User toDelete = ctx.UserSet.Where(u => u.Id == user.Id).FirstOrDefault();
+            ctx.UserSet.Remove(toDelete);
+            ctx.SaveChanges();
+            return true;
         }
 
         public List<User> getAllUsers()
@@ -37,7 +58,8 @@ namespace ModelMovieNet.Dao
 
         public User GetUser(int uid)
         {
-            throw new NotImplementedException();
+            DataModelContainer ctx = new DataModelContainer();
+            return ctx.UserSet.Where(u => u.Id == uid).FirstOrDefault();
         }
 
         public User LogUser(User user)
